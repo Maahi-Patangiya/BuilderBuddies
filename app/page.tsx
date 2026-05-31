@@ -108,7 +108,7 @@ export default function Home() {
         status: "Pending Expert Review"
       });
       setNewQuestion('');
-      alert("Your message has been securely piped straight into our support database!");
+      alert("Your message has been submitted into our support database!");
     } catch (err: any) {
       console.error("Firestore submission anomaly: ", err);
     }
@@ -142,7 +142,7 @@ export default function Home() {
     );
   }
 
-  // Active Authenticated Application UI Canvas View
+  // Active Application View
   return (
     <div style={{ fontFamily: 'system-ui', maxWidth: '1200px', margin: '0 auto', padding: '30px' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '2px solid #f1f5f9', paddingBottom: '20px' }}>
