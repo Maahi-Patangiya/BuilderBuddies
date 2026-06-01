@@ -131,11 +131,11 @@ export default function Home() {
             <input type="password" value={password} onChange={e => setPassword(e.target.value)} required style={{ width: '100%', padding: '10px', marginTop: '5px', borderRadius: '8px', border: '1px solid #cbd5e1' }} />
           </div>
           {authError && <p style={{ color: '#ef4444', fontSize: '13px', margin: 0 }}>{authError}</p>}
-          <button type="submit" style={{ padding: '12px', background: '#2563eb', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', marginTop: '10px' }}>
+          <button type="submit" style={{ padding: '12px', background: '#004ec4', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', marginTop: '10px' }}>
             {isRegistering ? "Create System Account" : "Access Secure Core"}
           </button>
         </form>
-        <button onClick={() => setIsRegistering(!isRegistering)} style={{ width: '100%', background: 'none', border: 'none', color: '#2563eb', marginTop: '20px', cursor: 'pointer', textDecoration: 'underline', fontSize: '14px' }}>
+        <button onClick={() => setIsRegistering(!isRegistering)} style={{ width: '100%', background: 'none', border: 'none', color: '#004ec4', marginTop: '20px', cursor: 'pointer', textDecoration: 'underline', fontSize: '14px' }}>
           {isRegistering ? "Already registered? Sign In instead" : "New to the system? Spin up an Account"}
         </button>
       </div>
@@ -146,12 +146,15 @@ export default function Home() {
   return (
     <div style={{ fontFamily: 'system-ui', maxWidth: '1200px', margin: '0 auto', padding: '30px' }}>
       <header style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', borderBottom: '2px solid #f1f5f9', paddingBottom: '20px' }}>
-        <div>
-          <h1 style={{ margin: 0, color: '#1e3a8a', fontSize: '28px' }}>👷 Builder Buddies Engine</h1>
-          <span style={{ color: '#64748b', fontSize: '14px' }}>Session Node: <strong style={{ color: '#334155' }}>{user.email}</strong></span>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+          <img src="/logo.svg" alt="Builder Buddies Logo" style={{ width: '70px', height: '70px' }} />
+          <div>
+            <h1 style={{ margin: 0, color: '#1e3a8a', fontSize: '28px' }}>👷 Builder Buddies Homepage</h1>
+            <span style={{ color: '#64748b', fontSize: '14px' }}>Session Node: <strong style={{ color: '#334155' }}>{user.email}</strong></span>
+          </div>
         </div>
         <div style={{ display: 'flex', gap: '12px' }}>
-          <button onClick={() => setPortalMode('worker')} style={{ padding: '10px 18px', background: portalMode === 'worker' ? '#2563eb' : '#f1f5f9', color: portalMode === 'worker' ? 'white' : '#334155', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', transition: 'all 0.2s' }}>Migrant Worker Panel</button>
+          <button onClick={() => setPortalMode('worker')} style={{ padding: '10px 18px', background: portalMode === 'worker' ? '#004ec4' : '#f1f5f9', color: portalMode === 'worker' ? 'white' : '#334155', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', transition: 'all 0.2s' }}>Migrant Worker Panel</button>
           <button onClick={() => setPortalMode('expert')} style={{ padding: '10px 18px', background: portalMode === 'expert' ? '#10b981' : '#f1f5f9', color: portalMode === 'expert' ? 'white' : '#334155', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', transition: 'all 0.2s' }}>Administrator Portal</button>
           <button onClick={handleLogout} style={{ padding: '10px 14px', background: '#fee2e2', color: '#ef4444', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '500' }}>Log Out</button>
         </div>
@@ -165,7 +168,7 @@ export default function Home() {
             <p style={{ color: '#64748b', fontSize: '14px', marginBottom: '20px' }}>Need assistance with salaries, housing conditions, or injury reports? File a question directly to live queues below.</p>
             <form onSubmit={submitWorkerQuery} style={{ display: 'flex', flexDirection: 'column', gap: '15px' }}>
               <textarea value={newQuestion} onChange={e => setNewQuestion(e.target.value)} placeholder="Type out your question or situation details thoroughly..." rows={5} required style={{ width: '100%', padding: '14px', borderRadius: '8px', border: '1px solid #cbd5e1', fontSize: '15px', fontFamily: 'inherit' }} />
-              <button type="submit" style={{ padding: '14px', background: '#2563eb', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', fontSize: '15px' }}>Submit Question</button>
+              <button type="submit" style={{ padding: '14px', background: '#004ec4', color: 'white', border: 'none', borderRadius: '8px', cursor: 'pointer', fontWeight: '600', fontSize: '15px' }}>Submit Question</button>
             </form>
           </section>
 
@@ -184,7 +187,7 @@ export default function Home() {
         </main>
       ) : (
         <main style={{ marginTop: '35px' }}>
-          {/* Expert Realtime Monitoring Triage Console */}
+          {/* Administrator Monitoring Console */}
           <div style={{ background: '#f0fdf4', padding: '25px', borderRadius: '16px', border: '1px solid #bbf7d0', marginBottom: '30px' }}>
             <h2 style={{ marginTop: 0, color: '#166534' }}>🛠️ Live NGO Helpdesk</h2>
             <p style={{ margin: 0, color: '#14532d', fontSize: '15px' }}>This feed updates automatically whenever a user enters a support query.</p>
