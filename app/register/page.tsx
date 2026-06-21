@@ -16,7 +16,7 @@ export function useUserData() {
       if (user) {
         const ref = doc(db, "users", user.uid);
         const unsubscribeSnapshot = onSnapshot(ref, (snap) => {
-          setUserData(snap.data());
+          setUserData(snap.data() || null);
         });
         return unsubscribeSnapshot; // cleans up snapshot listener on auth change
       } else {
