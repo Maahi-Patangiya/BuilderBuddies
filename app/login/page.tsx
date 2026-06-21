@@ -6,11 +6,14 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import { useTranslation } from "react-i18next"; // import hook
+import LanguageSwitcher from "@/components/LanguageSwitcher"; // import your component
 
 export default function LoginPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const router = useRouter();
+  const { t } = useTranslation(); // initialize translator
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -36,28 +39,12 @@ export default function LoginPage() {
         fontFamily: "'Segoe UI', Arial, sans-serif",
       }}
     >
-      {/* Language selector */}
+      {/* use the LanguageSwitcher component here */}
       <div style={{ alignSelf: "flex-end", marginBottom: "16px" }}>
-        <button
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            backgroundColor: "transparent",
-            border: "2px solid white",
-            borderRadius: "8px",
-            color: "white",
-            padding: "8px 14px",
-            fontWeight: 600,
-            fontSize: "15px",
-            cursor: "pointer",
-          }}
-        >
-          🌐 English ✓
-        </button>
+        <LanguageSwitcher />
       </div>
 
-      {/* Logo */}
+      {/* logo */}
       <div style={{ marginBottom: "40px", marginTop: "8px" }}>
         <Image
           src="/logo.svg"
@@ -68,7 +55,7 @@ export default function LoginPage() {
         />
       </div>
 
-      {/* Welcome text */}
+      {/* use the t() function for text */}
       <h1
         style={{
           color: "white",
@@ -79,7 +66,7 @@ export default function LoginPage() {
           lineHeight: 1.15,
         }}
       >
-        Welcome Back!
+        {t("welcome")}
       </h1>
 
       {/* Form */}
@@ -93,6 +80,7 @@ export default function LoginPage() {
           gap: "16px",
         }}
       >
+        {/* can add t('username') placeholders here later */}
         <input
           type="email"
           placeholder="Username"
@@ -149,32 +137,7 @@ export default function LoginPage() {
           Log In
         </button>
       </form>
-
-      {/* Footer links */}
-      <div
-        style={{
-          marginTop: "28px",
-          textAlign: "center",
-          color: "white",
-          fontSize: "15px",
-          fontWeight: 600,
-          lineHeight: 1.8,
-        }}
-      >
-        <p style={{ margin: 0 }}>
-          Don't have an account?{" "}
-          <Link
-            href="/register"
-            style={{
-              color: "white",
-              textDecoration: "underline",
-              fontWeight: 700,
-            }}
-          >
-            Create here
-          </Link>
-        </p>
-      </div>
+      {/* footer links?? */}
     </div>
   );
 }
