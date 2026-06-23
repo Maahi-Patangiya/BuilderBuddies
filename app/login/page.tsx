@@ -66,7 +66,7 @@ export default function LoginPage() {
           lineHeight: 1.15,
         }}
       >
-        {t("welcome")}
+        {t('login.welcome')}
       </h1>
 
       {/* Form */}
@@ -83,7 +83,7 @@ export default function LoginPage() {
         {/* can add t('username') placeholders here later */}
         <input
           type="email"
-          placeholder="Username"
+          placeholder={t('login.username')}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           style={{
@@ -102,7 +102,7 @@ export default function LoginPage() {
 
         <input
           type="password"
-          placeholder="Password"
+          placeholder={t('login.password')}
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           style={{
@@ -134,7 +134,7 @@ export default function LoginPage() {
             marginTop: "4px",
           }}
         >
-          Log In
+          {t('login.login')}
         </button>
       </form>
       {/* footer links?? */}

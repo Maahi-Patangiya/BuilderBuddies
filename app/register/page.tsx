@@ -6,9 +6,10 @@ import { createUserWithEmailAndPassword, onAuthStateChanged } from "firebase/aut
 import { collection, addDoc, getDocs, doc, setDoc, query, orderBy, onSnapshot } from "firebase/firestore";
 import Link from "next/link";
 import Image from "next/image";
+import { serverTimestamp } from "firebase/firestore";
 
 export function useUserData() {
-  const [userData, setUserData] = useState(null);
+  const [userData, setUserData] = useState<any>(null);
 
   useEffect(() => {
     // Wait for auth to resolve first
@@ -36,37 +37,25 @@ export default function RegisterPage() {
   const [accountType, setAccountType] = useState("");
 
   async function handleRegister(e: React.FormEvent) {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-      const user = userCredential.user;
+  try {
+    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+    const user = userCredential.user;
 
-      // Save extra user data to Firestore
-      await setDoc(doc(db, "users", user.uid), {
-        email: user.email,
-        accountType: accountType,   // "administrator" or "user"
-        createdAt: new Date(),
-      });
+    // Save user profile in Firestore
+    await setDoc(doc(db, "users", user.uid), {
+      email: user.email,
+      role: accountType as "admin" | "user",
+      createdAt: serverTimestamp(),
+    });
 
-      alert("Account created!");
-    } catch (error) {
-      console.error(error);
-      alert("Registration failed");
-    }
+    alert("Account created!");
+  } catch (error) {
+    console.error(error);
+    alert("Registration failed");
   }
-
-  async function handleRegister(e: React.FormEvent) {
-    e.preventDefault();
-
-    try {
-      await createUserWithEmailAndPassword(auth, email, password);
-      alert("Account created!");
-    } catch (error) {
-      console.error(error);
-      alert("Registration failed");
-    }
-  }
+}
 
   return (
     <div
