@@ -3,5 +3,14 @@
   "username": "Username",
   "password": "Password",
   "login": "Log In",
-  "noAccount": "Don't have an account?"
+  "noAccount": "Don't have an account?",
+
+  "resources": {
+    "title": "Resources",
+    "legal": "Legal Support",
+    "medical": "Medical Support",
+    "social": "Social Support",
+    "emergency": "Emergency Contacts",
+    "visitWebsite": "Visit Website"
+  }
 }

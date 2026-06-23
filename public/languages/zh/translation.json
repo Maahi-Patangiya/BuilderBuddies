@@ -1,0 +1,16 @@
+{
+  "welcome": "欢迎回来！",
+  "username": "用户名",
+  "password": "密码",
+  "login": "登录",
+  "noAccount": "还没有账户？",
+
+  "resources": {
+    "title": "资源",
+    "legal": "法律援助",
+    "medical": "医疗援助",
+    "social": "社会支持",
+    "emergency": "紧急联系方式",
+    "visitWebsite": "访问网站"
+  }
+}
