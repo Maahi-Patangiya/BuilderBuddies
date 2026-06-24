@@ -1,0 +1,66 @@
+export const styles = {
+  page: {
+    minHeight: "100vh",
+    backgroundColor: "var(--color-bg-light)",
+    fontFamily: "var(--font-family-base)",
+  },
+  header: {
+    backgroundColor: "var(--color-primary)",
+    padding: "var(--spacing-sm) var(--spacing-md)",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "space-between",
+    boxShadow: "var(--shadow-card)",
+  },
+  headerLeft: {
+    display: "flex",
+    alignItems: "center",
+    gap: "var(--spacing-sm)",
+  },
+  homeButton: {
+    backgroundColor: "transparent",
+    border: "none",
+    cursor: "pointer",
+    fontSize: "28px",
+  },
+  logoGroup: {
+    display: "flex",
+    alignItems: "center",
+    gap: "12px",
+  },
+  titleColumn: {
+    display: "flex",
+    flexDirection: "column" as const,
+  },
+  titleLine: {
+    color: "var(--color-white)",
+    margin: 0,
+    fontSize: "var(--font-size-subheading)",
+    fontWeight: 800,
+    lineHeight: 1,
+  },
+  pageLabel: {
+    color: "rgba(255,255,255,0.8)",
+    margin: 0,
+    fontSize: "12px",
+    fontWeight: 600,
+  },
+  languageButton: {
+    display: "flex",
+    alignItems: "center",
+    gap: "8px",
+    backgroundColor: "transparent",
+    border: "2px solid var(--color-white)",
+    borderRadius: "var(--radius-pill)",
+    color: "var(--color-white)",
+    padding: "8px 14px",
+    fontWeight: 600,
+    fontSize: "var(--font-size-small)",
+    cursor: "pointer",
+  },
+  content: {
+    padding: "var(--spacing-lg) var(--spacing-md)",
+    maxWidth: "500px",
+    margin: "0 auto",
+  },
+};
