@@ -1,9 +1,11 @@
 {
-  "welcome": "欢迎回来！",
-  "username": "用户名",
-  "password": "密码",
-  "login": "登录",
-  "noAccount": "还没有账户？",
+  "login": {
+    "welcome": "欢迎回来！",
+    "username": "用户名",
+    "password": "密码",
+    "login": "登录",
+    "noAccount": "还没有账户？"
+  },
 
   "resources": {
     "title": "资源",
@@ -11,6 +13,18 @@
     "medical": "医疗援助",
     "social": "社会支持",
     "emergency": "紧急联系方式",
-    "visitWebsite": "访问网站"
+
+    "salaryIssues": "工资未支付或拖欠",
+    "leaveDays": "休假与休息日",
+    "wica": "工伤赔偿法案（WICA）",
+    "medicalInsurance": "医疗保险",
+    "workplaceInjuries": "工伤事故",
+    "heatStress": "高温与脱水",
+    "mentalHealth": "心理健康支持",
+    "foodSupport": "食品援助",
+    "communityActivities": "社区活动",
+    "learning": "学习机会",
+
+    "organisations": "可提供帮助的机构"
   }
 }

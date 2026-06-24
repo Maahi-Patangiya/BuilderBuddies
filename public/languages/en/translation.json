@@ -1,9 +1,11 @@
 {
-  "welcome": "Welcome Back!",
-  "username": "Username",
-  "password": "Password",
-  "login": "Log In",
-  "noAccount": "Don't have an account?",
+  "login": {
+    "welcome": "Welcome Back!",
+    "username": "Username",
+    "password": "Password",
+    "login": "Log In",
+    "noAccount": "Don't have an account?"
+  },
 
   "resources": {
     "title": "Resources",
@@ -11,6 +13,18 @@
     "medical": "Medical Support",
     "social": "Social Support",
     "emergency": "Emergency Contacts",
-    "visitWebsite": "Visit Website"
+
+    "salaryIssues": "Salary Not Paid or Delayed",
+    "leaveDays": "Leave and Rest Days",
+    "wica": "Work Injury Compensation (WICA)",
+    "medicalInsurance": "Medical Insurance",
+    "workplaceInjuries": "Workplace Injuries",
+    "heatStress": "Heat Stress and Dehydration",
+    "mentalHealth": "Mental Health Support",
+    "foodSupport": "Food Support",
+    "communityActivities": "Community Activities",
+    "learning": "Learning Opportunities",
+
+    "organisations": "Organisations That Can Help"
   }
 }

@@ -1,9 +1,11 @@
 {
-  "welcome": "ফিরে আসায় স্বাগতম!",
-  "username": "ব্যবহারকারীর নাম",
-  "password": "পাসওয়ার্ড",
-  "login": "লগ ইন",
-  "noAccount": "অ্যাকাউন্ট নেই?",
+  "login": {
+    "welcome": "ফিরে আসায় স্বাগতম!",
+    "username": "ব্যবহারকারীর নাম",
+    "password": "পাসওয়ার্ড",
+    "login": "লগ ইন",
+    "noAccount": "অ্যাকাউন্ট নেই?"
+  },
 
   "resources": {
     "title": "রিসোর্স",
@@ -11,6 +13,18 @@
     "medical": "চিকিৎসা সহায়তা",
     "social": "সামাজিক সহায়তা",
     "emergency": "জরুরি যোগাযোগ",
-    "visitWebsite": "ওয়েবসাইট দেখুন"
+
+    "salaryIssues": "বেতন না পাওয়া বা বিলম্ব",
+    "leaveDays": "ছুটি ও বিশ্রামের দিন",
+    "wica": "কর্মস্থল আঘাত ক্ষতিপূরণ (WICA)",
+    "medicalInsurance": "চিকিৎসা বীমা",
+    "workplaceInjuries": "কর্মস্থলের আঘাত",
+    "heatStress": "তাপজনিত চাপ ও পানিশূন্যতা",
+    "mentalHealth": "মানসিক স্বাস্থ্য সহায়তা",
+    "foodSupport": "খাদ্য সহায়তা",
+    "communityActivities": "সামাজিক কার্যক্রম",
+    "learning": "শেখার সুযোগ",
+
+    "organisations": "সহায়তা প্রদানকারী সংস্থা"
   }
 }

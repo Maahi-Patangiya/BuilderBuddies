@@ -257,85 +257,48 @@ export default function PlaceholderPage() {
 
   {/* LEGAL */}
   <div ref={legalRef}>
-    <h2
-      style={{
-        fontSize: "36px",
-        marginBottom: "16px",
-      }}
-    >
-      {t("resources.legal")}
-    </h2>
-
-    <h3
-      style={{
-        fontSize: "24px",
-        marginBottom: "12px",
-        color: "#1A56DB",
-      }}
-    >
-      Salary Issues
+    <h3 style={{fontSize: "24px", marginBottom: "12px", fontWeight: 700,}}>
+      {t("resources.salaryIssues")}
     </h3>
 
     <p>
       If your salary is delayed, unpaid, or contains deductions that you do not
-      understand, help is available. Keep salary slips, bank transfer records,
-      employment contracts, and messages exchanged with your employer whenever
-      possible.
+      understand, keep evidence such as salary slips, bank records, employment
+      contracts and messages exchanged with your employer.
+    </p>
+
+    <h3
+      style = {{ fontSize: "24px", marginTop: "32px", marginBottom: "12px",fontWeight: 700}}>
+      {t("resources.leaveDays")}
+    </h3>
+
+    <p>
+      Work Permit holders are entitled to rest days and annual leave according
+      to Singapore employment regulations.
+    </p>
+
+    <h3
+      style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.wica")}
+    </h3>
+
+    <p>
+      If you are injured at work, you may be entitled to compensation under
+      the Work Injury Compensation Act (WICA).
     </p>
 
     <h4
-      style={{
-        marginTop: "24px",
-        marginBottom: "16px",
-      }}
-    >
-      Organisations that can help:
+      style={{ marginTop: "32px", marginBottom: "16px"}}>
+      {t("resources.organisations")}
     </h4>
-    <div
-      style={{
-        marginBottom: "20px",
-      }}
-    >
-      <a
-        href="https://www.mom.gov.sg"
-        target="_blank"
-        rel="noopener noreferrer"
-        style={{
-          color: "#2563EB",
-          textDecoration: "underline",
-          fontWeight: 600,
-          fontSize: "18px",
-        }}
-      >
-        Ministry of Manpower (MOM)
-      </a>
-
-      <p
-        style={{
-          marginTop: "6px",
-          marginLeft: "12px",
-          color: "#444",
-          lineHeight: 1.6,
-        }}
-      >
-        • Handles salary claims, employment disputes and work permit matters.
-      </p>
-    </div>
   </div>
 
   {/* MEDICAL */}
   <div
     ref={medicalRef}
-    style={{
-      marginTop: "64px",
-    }}
-  >
+    style={{marginTop: "64px",}}>
     <h2
-      style={{
-        fontSize: "36px",
-        marginBottom: "16px",
-      }}
-    >
+      style={{fontSize: "36px",marginBottom: "16px"}}>
       {t("resources.medical")}
     </h2>
 
@@ -347,13 +310,7 @@ export default function PlaceholderPage() {
   </div>
 
   {/* SOCIAL */}
-  <div
-    ref={socialRef}
-    style={{
-      marginTop: "64px",
-      marginBottom: "100px",
-    }}
-  >
+  <div ref={socialRef} style={{ marginTop: "64px", marginBottom: "100px" }}>
     <h2
       style={{
         fontSize: "36px",
