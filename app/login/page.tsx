@@ -1,6 +1,5 @@
 "use client";
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { auth } from "@/utils/firebase";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import Link from "next/link";
@@ -14,6 +13,14 @@ export default function LoginPage() {
   const [password, setPassword] = useState("");
   const router = useRouter();
   const { t } = useTranslation(); // initialize translator
+
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  if (!mounted) return null;
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();

@@ -42,7 +42,7 @@ export default function PlaceholderPage() {
               fontSize: "28px",
             }}
           >
-            🏠
+          
           </button>
 
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
@@ -98,9 +98,11 @@ export default function PlaceholderPage() {
       {/* Page Content */}
 <div
   style={{
+    width: "100%",
+    maxWidth: "1200px",
     padding: "32px 24px",
-    maxWidth: "900px",
     margin: "0 auto",
+    boxSizing: "border-box",
   }}
 >
   <h1
@@ -256,75 +258,192 @@ export default function PlaceholderPage() {
   </div>
 
   {/* LEGAL */}
-  <div ref={legalRef}>
-    <h3 style={{fontSize: "24px", marginBottom: "12px", fontWeight: 700,}}>
+  <div
+    ref={legalRef}
+    style={{
+      width: "100%",
+    }}
+  >
+    <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>
+      {t("resources.legal")}
+    </h2>
+
+    <h3 style={{ fontSize: "24px", marginBottom: "12px", fontWeight: 700 }}>
       {t("resources.salaryIssues")}
     </h3>
 
+    <ul>
+      <li>Employers must pay salary at least once a month.</li>
+      <li>Salary should normally be paid within 7 days after the salary period ends.</li>
+      <li>Workers should receive itemised payslips.</li>
+    </ul>
+
     <p>
-      If your salary is delayed, unpaid, or contains deductions that you do not
-      understand, keep evidence such as salary slips, bank records, employment
-      contracts and messages exchanged with your employer.
+      Official information:{" "}
+      <a href="https://www.mom.gov.sg/employment-practices/salary" target="_blank">
+        Ministry of Manpower (MOM)
+      </a>
     </p>
 
-    <h3
-      style = {{ fontSize: "24px", marginTop: "32px", marginBottom: "12px",fontWeight: 700}}>
+    <p>
+      Need help?{" "}
+      <a href="https://www.mwc.org.sg" target="_blank">MWC</a>,{" "}
+      <a href="https://www.home.org.sg" target="_blank">HOME</a>,{" "}
+      <a href="https://twc2.org.sg" target="_blank">TWC2</a>
+    </p>
+
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
       {t("resources.leaveDays")}
     </h3>
 
+    <ul>
+      <li>Workers are entitled to rest days.</li>
+      <li>Annual leave entitlement increases with length of service.</li>
+      <li>Medical leave may be granted when certified by a doctor.</li>
+    </ul>
+
     <p>
-      Work Permit holders are entitled to rest days and annual leave according
-      to Singapore employment regulations.
+      Official information:{" "}
+      <a href="https://www.mom.gov.sg/employment-practices/leave" target="_blank">
+        MOM Leave Entitlements
+      </a>
     </p>
 
-    <h3
-      style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
       {t("resources.wica")}
     </h3>
 
+    <ul>
+      <li>Workers injured at work may be entitled to compensation.</li>
+      <li>Medical expenses may be claimable.</li>
+      <li>Keep all medical reports and receipts.</li>
+    </ul>
+
     <p>
-      If you are injured at work, you may be entitled to compensation under
-      the Work Injury Compensation Act (WICA).
+      Official information:{" "}
+      <a href="https://www.mom.gov.sg/workplace-safety-and-health/work-injury-compensation" target="_blank">
+        MOM WICA Guide
+      </a>
     </p>
 
-    <h4
-      style={{ marginTop: "32px", marginBottom: "16px"}}>
-      {t("resources.organisations")}
-    </h4>
+    <p>
+      Need help?{" "}
+      <a href="https://www.home.org.sg" target="_blank">HOME</a>,{" "}
+      <a href="https://www.mwc.org.sg" target="_blank">MWC</a>,{" "}
+      <a href="https://www.healthserve.org.sg" target="_blank">HealthServe</a>
+    </p>
   </div>
 
   {/* MEDICAL */}
-  <div
-    ref={medicalRef}
-    style={{marginTop: "64px",}}>
-    <h2
-      style={{fontSize: "36px",marginBottom: "16px"}}>
+  <div ref={medicalRef} style={{ marginTop: "64px" }}>
+    <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>
       {t("resources.medical")}
     </h2>
 
+    <h3 style={{ fontSize: "24px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.medicalInsurance")}
+    </h3>
+
+    <ul>
+      <li>Employers are required to provide medical insurance for Work Permit holders.</li>
+      <li>Workers should be able to access necessary medical treatment.</li>
+    </ul>
+
     <p>
-      Most Work Permit holders are covered by employer-provided
-      medical insurance. Medical support is also available through
-      NGOs and public healthcare providers.
+      Official information:{" "}
+      <a href="https://www.mom.gov.sg/passes-and-permits/work-permit-for-foreign-worker/sector-specific-rules/medical-insurance" target="_blank">
+        MOM Medical Insurance Requirements
+      </a>
+    </p>
+
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.workplaceInjuries")}
+    </h3>
+
+    <ul>
+      <li>Seek medical attention immediately after an injury.</li>
+      <li>Keep medical reports and receipts.</li>
+      <li>Inform relevant support organisations if assistance is needed.</li>
+    </ul>
+
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.heatStress")}
+    </h3>
+
+    <ul>
+      <li>Drink water regularly.</li>
+      <li>Seek help if you feel dizzy, faint or unwell.</li>
+      <li>Take rest breaks when required.</li>
+    </ul>
+
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.mentalHealth")}
+    </h3>
+
+    <ul>
+      <li>Stress, loneliness and homesickness are common.</li>
+      <li>Counselling and support services are available.</li>
+    </ul>
+
+    <p>
+      Support available through{" "}
+      <a href="https://www.healthserve.org.sg" target="_blank">HealthServe</a>{" "}
+      and{" "}
+      <a href="https://www.home.org.sg" target="_blank">HOME</a>.
     </p>
   </div>
 
   {/* SOCIAL */}
   <div ref={socialRef} style={{ marginTop: "64px", marginBottom: "100px" }}>
-    <h2
-      style={{
-        fontSize: "36px",
-        marginBottom: "16px",
-      }}
-    >
+    <h2 style={{ fontSize: "36px", marginBottom: "24px" }}>
       {t("resources.social")}
     </h2>
 
+    <h3 style={{ fontSize: "24px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.foodSupport")}
+    </h3>
+
     <p>
-      Community organisations provide food support, recreational
-      activities, educational opportunities and community events.
+      Food support may be available through community organisations and religious groups.
+    </p>
+
+    <p>
+      <a href="https://www.hkm.sg" target="_blank">
+        Krishna's Free Meal Programme
+      </a>
+    </p>
+
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.communityActivities")}
+    </h3>
+
+    <p>
+      Community events, sports activities and outreach programmes help workers stay connected.
+    </p>
+
+    <p>
+      <a href="https://www.itsrainingraincoats.com" target="_blank">
+        It's Raining Raincoats (IRR)
+      </a>
+    </p>
+
+    <h3 style={{ fontSize: "24px", marginTop: "32px", marginBottom: "12px", fontWeight: 700 }}>
+      {t("resources.learning")}
+    </h3>
+
+    <p>
+      NGOs may offer English classes, digital literacy programmes and financial literacy workshops.
+    </p>
+
+    <p>
+      Organisations involved include{" "}
+      <a href="https://www.healthserve.org.sg" target="_blank">HealthServe</a>,{" "}
+      <a href="https://www.mwc.org.sg" target="_blank">MWC</a>,{" "}
+      <a href="https://www.home.org.sg" target="_blank">HOME</a>, and{" "}
+      <a href="https://www.itsrainingraincoats.com" target="_blank">IRR</a>.
     </p>
   </div>
+
 </div>
     </div>
   );
