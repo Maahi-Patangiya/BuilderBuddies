@@ -2,6 +2,7 @@
 
 import { useRouter } from "next/navigation";
 import Image from "next/image";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function PlaceholderPage() {
   const router = useRouter();
@@ -56,18 +57,7 @@ export default function PlaceholderPage() {
                   lineHeight: 1,
                 }}
               >
-                Builder
-              </h1>
-              <h1
-                style={{
-                  color: "white",
-                  margin: 0,
-                  fontSize: "22px",
-                  fontWeight: 800,
-                  lineHeight: 1,
-                }}
-              >
-                Buddies
+                Builder Buddies
               </h1>
               <p
                 style={{
@@ -83,24 +73,7 @@ export default function PlaceholderPage() {
             </div>
           </div>
         </div>
-
-        <button
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            backgroundColor: "transparent",
-            border: "2px solid white",
-            borderRadius: "8px",
-            color: "white",
-            padding: "8px 14px",
-            fontWeight: 600,
-            fontSize: "14px",
-            cursor: "pointer",
-          }}
-        >
-          🌐 English ✓
-        </button>
+        <LanguageSwitcher />
       </div>
 
       {/* Page content goes here */}

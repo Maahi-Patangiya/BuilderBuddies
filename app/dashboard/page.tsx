@@ -6,6 +6,7 @@ import { auth } from "@/utils/firebase";
 import { onAuthStateChanged, signOut, User } from "firebase/auth";
 import Link from "next/link";
 import Image from "next/image";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 export default function DashboardPage() {
   const router = useRouter();
@@ -92,24 +93,7 @@ export default function DashboardPage() {
 
         {/* Right: language + logout */}
         <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-          <button
-            style={{
-              display: "flex",
-              alignItems: "center",
-              gap: "8px",
-              backgroundColor: "transparent",
-              border: "2px solid white",
-              borderRadius: "8px",
-              color: "white",
-              padding: "8px 14px",
-              fontWeight: 600,
-              fontSize: "14px",
-              cursor: "pointer",
-            }}
-          >
-            🌐 English ✓
-          </button>
-
+          <LanguageSwitcher />
           <button
             onClick={handleLogout}
             style={{
