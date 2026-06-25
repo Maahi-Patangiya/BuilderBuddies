@@ -7,6 +7,7 @@ import { collection, addDoc, getDocs, doc, setDoc, query, orderBy, onSnapshot } 
 import Link from "next/link";
 import Image from "next/image";
 import { serverTimestamp } from "firebase/firestore";
+import LanguageSwitcher from "@/components/LanguageSwitcher"; // import your component
 
 export function useUserData() {
   const [userData, setUserData] = useState<any>(null);
@@ -34,7 +35,7 @@ export function useUserData() {
 export default function RegisterPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [accountType, setAccountType] = useState("");
+  const [accountType, setAccountType] = useState<"administrator" | "user" | "">("");
 
   async function handleRegister(e: React.FormEvent) {
   e.preventDefault();
@@ -44,11 +45,11 @@ export default function RegisterPage() {
     const user = userCredential.user;
 
     // Save user profile in Firestore
-    await setDoc(doc(db, "users", user.uid), {
-      email: user.email,
-      role: accountType as "admin" | "user",
-      createdAt: serverTimestamp(),
-    });
+  await setDoc(doc(db, "users", user.uid), {
+    email: user.email,
+    accountType: accountType, // ✅ matches faq page + Firestore rules
+    createdAt: serverTimestamp(),
+  });
 
     alert("Account created!");
   } catch (error) {
@@ -70,26 +71,9 @@ export default function RegisterPage() {
         fontFamily: "'Segoe UI', Arial, sans-serif",
       }}
     >
-      {/* Language selector */}
-      {/* <div style={{ alignSelf: "flex-end", marginBottom: "16px" }}>
-        <button
-          style={{
-            display: "flex",
-            alignItems: "center",
-            gap: "8px",
-            backgroundColor: "transparent",
-            border: "2px solid white",
-            borderRadius: "8px",
-            color: "white",
-            padding: "8px 14px",
-            fontWeight: 600,
-            fontSize: "15px",
-            cursor: "pointer",
-          }}
-        >
-          🌐 English ✓
-        </button>
-      </div> */}
+      <div style={{ alignSelf: "flex-end", marginBottom: "16px" }}>
+        <LanguageSwitcher />
+      </div>
 
       {/* Logo */}
       <div style={{ marginBottom: "40px", marginTop: "8px" }}>
@@ -168,7 +152,7 @@ export default function RegisterPage() {
         {/* Account type dropdown */}
         <select
           value={accountType}
-          onChange={(e) => setAccountType(e.target.value)}
+          onChange={(e) => setAccountType(e.target.value as "administrator" | "user" | "")}
           style={{
             width: "100%",
             padding: "18px 20px",

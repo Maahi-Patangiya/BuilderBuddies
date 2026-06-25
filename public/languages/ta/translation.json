@@ -4,7 +4,8 @@
     "username": "பயனர்பெயர்",
     "password": "கடவுச்சொல்",
     "login": "உள்நுழையவும்",
-    "noAccount": "கணக்கு இல்லையா?"
+    "noAccount": "கணக்கு இல்லையா?",
+    "register": "பதிவு செய்யவும்"
   },
 
   "resources": {

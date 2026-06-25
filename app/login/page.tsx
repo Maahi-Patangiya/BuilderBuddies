@@ -138,6 +138,27 @@ export default function LoginPage() {
         </button>
       </form>
       {/* footer links?? */}
+      <div
+        style={{
+          marginTop: "28px",
+          textAlign: "center",
+          color: "white",
+          fontSize: "15px",
+          fontWeight: 600,
+        }}
+      >
+        {t('login.noAccount')}
+        <Link
+          href="/register"
+          style={{
+            color: "white",
+            textDecoration: "underline",
+            fontWeight: 700, paddingLeft: "4px",
+          }}
+        >
+          {t('login.register')}
+        </Link>
+      </div>
     </div>
   );
 }

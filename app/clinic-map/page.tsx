@@ -67,7 +67,6 @@ export default function PlaceholderPage() {
                   fontWeight: 600,
                 }}
               >
-                {/* Change this to match the page: "Clinic Map" | "Resources" | "FAQ" */}
                 Clinic Map
               </p>
             </div>
