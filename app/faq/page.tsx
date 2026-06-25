@@ -21,6 +21,7 @@ import Image from "next/image";
 import { styles } from "@/app/styles/sharedstyles";
 import LanguageSwitcher from "@/components/LanguageSwitcher";
 
+
 interface Question {
   id: string;
   question: string;

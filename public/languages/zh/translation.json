@@ -4,7 +4,8 @@
     "username": "用户名",
     "password": "密码",
     "login": "登录",
-    "noAccount": "还没有账户？"
+    "noAccount": "还没有账户？",
+    "register": "注册"
   },
 
   "resources": {

@@ -4,7 +4,8 @@
     "username": "ব্যবহারকারীর নাম",
     "password": "পাসওয়ার্ড",
     "login": "লগ ইন",
-    "noAccount": "অ্যাকাউন্ট নেই?"
+    "noAccount": "অ্যাকাউন্ট নেই?",
+    "register": "নিবন্ধন করুন"
   },
 
   "resources": {
