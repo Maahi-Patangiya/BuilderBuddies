@@ -201,9 +201,8 @@ export default function FaqPage() {
           <div style={styles.logoGroup}>
             <Image src="/logo.svg" alt="Builder Buddies" width={60} height={60} priority />
             <div style={styles.titleColumn}>
-              <h1 style={styles.titleLine}>Builder</h1>
-              <h1 style={styles.titleLine}>Buddies</h1>
-              <p style={styles.pageLabel}>Dashboard</p>
+              <h1 style={styles.titleLine}>Builder Buddies</h1>
+              <p style={styles.pageLabel}>FAQ</p>
             </div>
           </div>
         </div>
