@@ -79,7 +79,7 @@ export default function DashboardPage() {
           </Link>
 
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
-            <Image src="/logo.svg" alt="Builder Buddies" width={60} height={60} priority />
+            <Image src="/logo.png" alt="Builder Buddies" width={60} height={60} priority />
             <div>
               <h1 style={{ color: "white", margin: 0, fontSize: "22px", fontWeight: 800, lineHeight: 1 }}>
                 Builder Buddies
