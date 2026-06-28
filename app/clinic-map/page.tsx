@@ -41,7 +41,7 @@ export default function PlaceholderPage() {
 
           <div style={{ display: "flex", alignItems: "center", gap: "12px" }}>
             <Image
-              src="/logo.svg"
+              src="/logo.png"
               alt="Builder Buddies"
               width={60}
               height={60}

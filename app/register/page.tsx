@@ -78,7 +78,7 @@ export default function RegisterPage() {
       {/* Logo */}
       <div style={{ marginBottom: "40px", marginTop: "8px" }}>
         <Image
-          src="/logo.svg"
+          src="/logo.png"
           alt="Builder Buddies Logo"
           width={200}
           height={200}
