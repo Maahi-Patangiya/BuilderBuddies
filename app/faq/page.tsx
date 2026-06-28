@@ -209,7 +209,7 @@ export default function FaqPage() {
           justifyContent: "space-between",
           boxShadow: "0 2px 8px rgba(0,0,0,0.1)",
         }}
-      >
+>
         <div style={{ display: "flex", alignItems: "center", gap: "16px" }}>
           <button
             onClick={() => router.push("/dashboard")}
@@ -365,7 +365,7 @@ export default function FaqPage() {
                     <button
                       onClick={() => handleSubmitAnswer(q)}
                       style={{
-                        backgroundColor: "var(--color-primary)",
+                        backgroundColor: "#1A56DB",
                         color: "white",
                         border: "none",
                         borderRadius: "10px",
@@ -478,7 +478,7 @@ export default function FaqPage() {
           <button
             onClick={handleSubmitQuestion}
             style={{
-              backgroundColor: "var(--color-primary)",
+              backgroundColor: "#1A56DB",
               color: "white",
               border: "none",
               borderRadius: "10px",
