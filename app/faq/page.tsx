@@ -188,7 +188,7 @@ export default function FaqPage() {
   }
 
   if (loading) {
-    return <div style={{ minHeight: "100vh", backgroundColor: "var(--color-primary)" }} />;
+    return <div style={{ minHeight: "100vh", backgroundColor: "#2563eb" }} />;
   }
 
   return (
@@ -365,7 +365,7 @@ export default function FaqPage() {
                     <button
                       onClick={() => handleSubmitAnswer(q)}
                       style={{
-                        backgroundColor: "var(--color-primary)",
+                        backgroundColor: "#2563eb",
                         color: "white",
                         border: "none",
                         borderRadius: "10px",
@@ -478,7 +478,7 @@ export default function FaqPage() {
           <button
             onClick={handleSubmitQuestion}
             style={{
-              backgroundColor: "var(--color-primary)",
+              backgroundColor: "#2563eb",
               color: "white",
               border: "none",
               borderRadius: "10px",
