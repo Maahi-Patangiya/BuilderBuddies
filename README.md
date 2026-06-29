@@ -69,6 +69,18 @@ It will control the layout, responsiveness, and visual presentation of the platf
 | 29 June-5 July | Peer evaluations<br>Web scraping for resource directory (python)<br><br>GMaps API enhance the clinic feature |
 
 # Software Engineering Practices
+1. Version Control
+GitHub was used as the project's version control system to enable parallel development. New features were developed on dedicated feature branches before being merged into the main branch through Pull Requests. This workflow reduced merge conflicts, preserved a stable main branch and allowed team members to review changes before integration.
+
+2. Modular Architecture & Separation of Concerns
+Builder Buddies adopts a modular architecture by organising the application into feature-specific pages such as Login, Dashboard, Clinic Map, FAQ and Resources using the Next.js App Router. Each page has a single responsibility, enabling team members to work on features independently. Shared functionality, including multilingual support, is abstracted into reusable components (LanguageSwitcher and TranslationProvider), while common styling is centralised in sharedstyles.ts. This improves code readability, reduces duplication and simplifies future maintenance and feature expansion.
+
+3. Internationalisation and Scalability
+As Builder Buddies is designed for migrant workers from diverse linguistic backgrounds, multilingual support was built into the application's architecture from the outset. Using react-i18next, language-specific JSON files and translation keys (t("...")), the application dynamically renders content in English, Bengali, Tamil and Chinese. A shared TranslationProvider manages language state, while LanguageSwitcher provides a consistent interface across all pages. This approach separates application logic from displayed content, making translations easier to maintain and allowing new languages to be added with minimal code changes.
+
+4. Iterative Development & User-Centred Design
+Builder Buddies was developed iteratively, with features progressively refined based on project requirements and usability considerations. The team first established the core application structure before incrementally introducing features such as multilingual support, healthcare resources and clinic mapping. Existing features, including the Resources page, were continuously enhanced to better address migrant workers' needs. This iterative approach enabled regular improvements while maintaining a stable and functional application throughout development.
+
 
 # BuilderBuddies
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
